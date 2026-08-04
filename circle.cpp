@@ -1,14 +1,29 @@
 #include<iostream>
 using namespace std;
-int main()
-{
-cout<<"enter a number";
-int r;
-cin>>r>>endl;
-int circum=2*3.14*r;
-cout<<circum<<endl;
-int area=3.14*r*r;
-cout<<area<<endl;
-return 0;
-}
-
+class circle{
+private: 
+  double radius;
+  
+public:
+  void accept(){
+  cout<<"enter the radius";
+  cin>>radius;
+  }
+  
+  void display(){
+  double area= 3.14* radius*radius;
+  double circum= 2*3.14*radius;
+  
+  cout<<"area:"<<area<<endl;
+  cout<<"circum:"<<circum<<endl;
+  }
+  };
+  
+  
+  int main() 
+  {
+       circle c;
+       c.accept();
+       c.display();
+       return 0;
+       }
